@@ -1,31 +1,45 @@
 # The Ancestors' Room
 
-**The Living Ancestors' Room Experience**
+**Rooted. Grounded. Guided.**
 
-> The website itself becomes the room. Visitors discover everything naturally as they explore.
+> This is not just a shop.  
+> This is where remembrance becomes ritual.
 
-This is not just a shop.  
-This is where remembrance becomes ritual.
+Immersive single-page experience matching the updated Concept mockup (v2).  
+The website itself becomes the room.
 
-## Concept
+## Features
 
-An immersive single-page experience designed to feel like stepping into a living ancestral room filled with herbs, candles, ritual tools, and stories. Inspired by Concept 3 design reference.
+- Fixed left sidebar navigation (01–07) with active-section highlighting
+- Full-viewport atmospheric hero with gentle parallax
+- Interactive **The Table** section with clickable hotspots (+), tooltips, and detail modal
+- Three feature cards: Apothecary · Guidance · Archive
+- “The Door Remains Open” + newsletter join form
+- Sound toggle (UI ready for ambient audio)
+- Smooth GSAP ScrollTrigger reveals & entrances
+- Fully responsive (sidebar collapses to mobile menu)
+- Accessible focus states, keyboard modal close (Esc)
 
-### Sections
-- **Hero / The Room** – Atmospheric entry with invitation to explore
-- **Explore Naturally** – Working Table, Apothecary, Herbal Corner, Ancestral Altar, Library
-- **Seek Guidance** – Spiritual consultations & ancestral connections
-- **The Journal** – Writings and reflections
-- **Our Story** – Seven generations of knowledge and legacy
+## Sections
 
-## Tech
-- Pure HTML / CSS / vanilla JS
-- Google Fonts: Cinzel (display), Cormorant Garamond (body), Inter (UI)
-- Fully responsive
-- Subtle scroll and hover interactions
+| #  | Section          |
+|----|------------------|
+| 01 | Welcome (Hero)   |
+| 02 | The Table        |
+| 03 | The Apothecary   |
+| 04 | Guidance         |
+| 05 | The Archive      |
+| 06 | The Lineage      |
+| 07 | Connect          |
 
-## Local Preview
-Open `index.html` in a browser or serve with any static server:
+## Stack
+
+- Semantic HTML5
+- Custom CSS (no framework)
+- Vanilla JS + GSAP 3 (CDN) for motion
+- Google Fonts: Cinzel, Cormorant Garamond, Inter
+
+## Local preview
 
 ```bash
 npx serve .
@@ -33,11 +47,12 @@ npx serve .
 python -m http.server 8000
 ```
 
-## Credits
-Design direction based on the provided Concept 3 mockup.  
-Photography via Unsplash (placeholders for production assets).
+Open `http://localhost:3000` (or 8000).
+
+## GitHub
+
+https://github.com/zunaidhasan/the-ancestors-room
 
 ---
 
-**ÌBÀ AṢẸ EGÚN**  
-Rooted. Grounded. Guided.
+**ÌBÀ AṢẸ EGÚN** ✦
