@@ -3,167 +3,237 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Ancestors' Room | The Living Ancestors' Room Experience</title>
-  <meta name="description" content="The website itself becomes the room. Visitors discover everything naturally as they explore. This is not just a shop. This is where remembrance becomes ritual.">
+  <title>The Ancestors' Room | Rooted. Grounded. Guided.</title>
+  <meta name="description" content="This is not just a shop. This is where remembrance becomes ritual. Explore the living ancestral room.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
 </head>
 <body>
-  <!-- Top Concept Banner -->
-  <div class="concept-banner">
-    <span class="concept-label">CONCEPT 3</span>
-    <h1 class="concept-title">THE LIVING ANCESTORS' ROOM EXPERIENCE</h1>
-    <p class="concept-tagline">THE WEBSITE ITSELF BECOMES THE ROOM. VISITORS DISCOVER EVERYTHING NATURALLY AS THEY EXPLORE.</p>
+  <!-- Mobile menu toggle -->
+  <button class="mobile-toggle" aria-label="Open navigation" id="mobileToggle">
+    <span></span><span></span><span></span>
+  </button>
+
+  <!-- LEFT SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-top">
+      <a href="#welcome" class="sidebar-logo">
+        <span class="logo-line1">THE</span>
+        <span class="logo-line2">ANCESTORS'</span>
+        <span class="logo-line3">ROOM</span>
+      </a>
+      <p class="sidebar-tagline">
+        <span>✦</span> ROOTED.<br>
+        GROUNDED.<br>
+        GUIDED. <span>✦</span>
+      </p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a href="#welcome" class="nav-item active" data-section="01">
+        <span class="nav-num">01</span>
+        <span class="nav-label">WELCOME</span>
+      </a>
+      <a href="#table" class="nav-item" data-section="02">
+        <span class="nav-num">02</span>
+        <span class="nav-label">THE TABLE</span>
+      </a>
+      <a href="#apothecary" class="nav-item" data-section="03">
+        <span class="nav-num">03</span>
+        <span class="nav-label">THE APOTHECARY</span>
+      </a>
+      <a href="#guidance" class="nav-item" data-section="04">
+        <span class="nav-num">04</span>
+        <span class="nav-label">GUIDANCE</span>
+      </a>
+      <a href="#archive" class="nav-item" data-section="05">
+        <span class="nav-num">05</span>
+        <span class="nav-label">THE ARCHIVE</span>
+      </a>
+      <a href="#lineage" class="nav-item" data-section="06">
+        <span class="nav-num">06</span>
+        <span class="nav-label">THE LINEAGE</span>
+      </a>
+      <a href="#connect" class="nav-item" data-section="07">
+        <span class="nav-num">07</span>
+        <span class="nav-label">CONNECT</span>
+      </a>
+    </nav>
+
+    <div class="sidebar-bottom">
+      <button class="sound-toggle" id="soundToggle" aria-pressed="true">
+        <span class="sound-label">SOUND: ON</span>
+        <span class="sound-icon">✦</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+    <!-- Top bar icons -->
+    <div class="top-actions">
+      <button class="icon-btn" aria-label="Search">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+      </button>
+      <button class="icon-btn" aria-label="Share">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+      </button>
+    </div>
+
+    <!-- 01 WELCOME / HERO -->
+    <section class="hero section" id="welcome" data-nav="01">
+      <div class="hero-bg">
+        <div class="hero-image"></div>
+        <div class="hero-gradient"></div>
+      </div>
+      <div class="hero-content">
+        <p class="hero-eyebrow">WELCOME TO</p>
+        <h1 class="hero-title">THE ANCESTORS' ROOM</h1>
+        <p class="hero-subtitle">This is not just a shop.<br>This is where remembrance becomes ritual.</p>
+        <a href="#table" class="begin-btn">
+          <span class="begin-arrow">↓</span>
+          <span>BEGIN TO EXPLORE</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- 02 THE TABLE -->
+    <section class="table-section section" id="table" data-nav="02">
+      <div class="table-layout">
+        <div class="table-text">
+          <span class="section-num">02</span>
+          <h2 class="section-heading">THE TABLE</h2>
+          <p class="section-body">Everything on this table has a purpose. Move closer. Take your time. Learn. Remember.</p>
+          <p class="section-hint">CLICK AN OBJECT TO DISCOVER</p>
+        </div>
+        <div class="table-visual">
+          <div class="table-image-wrap">
+            <div class="table-image"></div>
+            <!-- Interactive hotspots -->
+            <button class="hotspot" style="--x: 18%; --y: 42%;" data-title="Mortar & Pestle" data-desc="Used to grind roots, leaves and resins with intention. The rhythm itself is a prayer." aria-label="Mortar & Pestle">
+              <span class="hotspot-plus">+</span>
+            </button>
+            <button class="hotspot" style="--x: 32%; --y: 28%;" data-title="Ritual Candle" data-desc="Beeswax and intention. Light it when you call the names of those who came before." aria-label="Ritual Candle">
+              <span class="hotspot-plus">+</span>
+            </button>
+            <button class="hotspot" style="--x: 48%; --y: 38%;" data-title="Dried Botanicals" data-desc="Gathered in season. Roots, leaves and barks that carry the memory of the land." aria-label="Dried Botanicals">
+              <span class="hotspot-plus">+</span>
+            </button>
+            <button class="hotspot" style="--x: 62%; --y: 55%;" data-title="Herbal Bundle" data-desc="Tied with care. For cleansing, protection, and quiet remembrance." aria-label="Herbal Bundle">
+              <span class="hotspot-plus">+</span>
+            </button>
+            <button class="hotspot" style="--x: 72%; --y: 32%;" data-title="Ancestral Oil" data-desc="Infused under moon and prayer. Anoint the body, the altar, the doorways." aria-label="Ancestral Oil">
+              <span class="hotspot-plus">+</span>
+            </button>
+            <button class="hotspot" style="--x: 78%; --y: 58%;" data-title="Oracle Card" data-desc="A single card drawn when the heart needs a word from the other side." aria-label="Oracle Card">
+              <span class="hotspot-plus">+</span>
+            </button>
+            <button class="hotspot" style="--x: 28%; --y: 68%;" data-title="Seeds & Roots" data-desc="The beginning of everything. Plant them in soil or in spirit." aria-label="Seeds & Roots">
+              <span class="hotspot-plus">+</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 / 04 / 05 Cards -->
+    <section class="cards-row section" id="apothecary" data-nav="03">
+      <article class="info-card" id="card-apothecary">
+        <div class="card-bg" style="background-image: url('https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=800&q=80')"></div>
+        <div class="card-inner">
+          <span class="card-num">03</span>
+          <h3>THE APOTHECARY</h3>
+          <p>Hand-prepared with ancestral knowledge, prayer, and intention.</p>
+          <a href="#apothecary-detail" class="card-enter">ENTER</a>
+        </div>
+      </article>
+
+      <article class="info-card" id="guidance" data-nav="04">
+        <div class="card-bg" style="background-image: url('https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=800&q=80')"></div>
+        <div class="card-inner">
+          <span class="card-num">04</span>
+          <h3>GUIDANCE</h3>
+          <p>When you need answers beyond what products can provide.</p>
+          <a href="#guidance-detail" class="card-enter">ENTER</a>
+        </div>
+      </article>
+
+      <article class="info-card" id="archive" data-nav="05">
+        <div class="card-bg" style="background-image: url('https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&q=80')"></div>
+        <div class="card-inner">
+          <span class="card-num">05</span>
+          <h3>THE ARCHIVE</h3>
+          <p>Teachings. Rituals. Stories that keep our people alive.</p>
+          <a href="#archive-detail" class="card-enter">ENTER</a>
+        </div>
+      </article>
+    </section>
+
+    <!-- Door + Join -->
+    <section class="bottom-split section" id="lineage" data-nav="06">
+      <div class="door-panel">
+        <div class="door-bg"></div>
+        <div class="door-content">
+          <h2>THE DOOR REMAINS OPEN</h2>
+          <p>Come back. There is always more to learn.<br>There is always more to remember.</p>
+          <a href="#welcome" class="return-btn">RETURN TO THE ROOM</a>
+        </div>
+      </div>
+
+      <div class="join-panel" id="connect" data-nav="07">
+        <div class="join-content">
+          <h2>JOIN THE ROOM</h2>
+          <p>Receive letters, teachings, and updates from The Ancestors' Room.</p>
+          <form class="join-form" id="joinForm">
+            <input type="email" placeholder="Enter your email" required aria-label="Email address">
+            <button type="submit">JOIN THE ROOM</button>
+          </form>
+          <p class="join-blessing">ÌBÀ AṢẸ EGÚN <span>✦</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-left">
+        <span>© The Ancestors' Room. All rights reserved.</span>
+        <nav class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Shipping & Returns</a>
+        </nav>
+      </div>
+      <div class="footer-right">
+        <span class="follow-label">Follow Us</span>
+        <div class="socials">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="YouTube">▶</a>
+          <a href="#" aria-label="TikTok">♪</a>
+        </div>
+        <span class="page-indicator">04</span>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Hotspot Tooltip / Modal -->
+  <div class="tooltip" id="tooltip" hidden>
+    <h4 class="tooltip-title"></h4>
+    <p class="tooltip-desc"></p>
   </div>
 
-  <!-- Navigation -->
-  <header class="site-header">
-    <button class="menu-btn" aria-label="Open menu">
-      <span>MENU</span>
-      <span class="menu-line"></span>
-    </button>
-    <a href="#" class="logo">THE ANCESTORS' ROOM</a>
-    <a href="#enter" class="enter-btn">
-      ENTER THE ROOM
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-        <path d="M5 12h14M12 5l7 7-7 7"/>
-      </svg>
-    </a>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="hero" id="enter">
-    <div class="hero-bg"></div>
-    <div class="hero-overlay"></div>
-    
-    <div class="scroll-indicator">
-      <div class="scroll-dots">
-        <span class="dot active"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-      </div>
-      <span class="scroll-text">SCROLL TO EXPLORE</span>
+  <!-- Object Detail Modal -->
+  <div class="modal-overlay" id="modalOverlay" hidden>
+    <div class="modal">
+      <button class="modal-close" aria-label="Close">&times;</button>
+      <h3 class="modal-title"></h3>
+      <p class="modal-body"></p>
     </div>
-
-    <div class="hero-content">
-      <p class="hero-welcome">— WELCOME TO —</p>
-      <h2 class="hero-title">THE ANCESTORS' ROOM</h2>
-      <p class="hero-subtitle">This is not just a shop.<br>This is where remembrance<br>becomes ritual.</p>
-      <div class="click-hint">
-        <div class="hint-icon">∪</div>
-        <span>CLICK AN OBJECT TO LEARN MORE</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- Explore Section -->
-  <section class="explore-section">
-    <div class="section-header">
-      <h2 class="section-title">EXPLORE NATURALLY</h2>
-      <p class="section-subtitle">EVERY OBJECT HAS A PURPOSE. EVERY CORNER HAS A STORY.</p>
-    </div>
-
-    <div class="explore-grid">
-      <article class="explore-card">
-        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1602928321679-447b5e1aa976?w=600&q=80')"></div>
-        <div class="card-content">
-          <h3>THE WORKING TABLE</h3>
-          <p>Objects chosen with intention and prepared with purpose.</p>
-          <a href="#working-table" class="card-btn">EXPLORE</a>
-        </div>
-      </article>
-
-      <article class="explore-card">
-        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=600&q=80')"></div>
-        <div class="card-content">
-          <h3>THE APOTHECARY</h3>
-          <p>Oils, Candles, Powders, Baths, Washes and Ritual Tools.</p>
-          <a href="#apothecary" class="card-btn">EXPLORE</a>
-        </div>
-      </article>
-
-      <article class="explore-card">
-        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1466692476866-aef1dfb1e735?w=600&q=80')"></div>
-        <div class="card-content">
-          <h3>THE HERBAL CORNER</h3>
-          <p>Roots, Leaves, Barks and Botanicals from the Earth.</p>
-          <a href="#herbal" class="card-btn">EXPLORE</a>
-        </div>
-      </article>
-
-      <article class="explore-card">
-        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=600&q=80')"></div>
-        <div class="card-content">
-          <h3>THE ANCESTRAL ALTAR</h3>
-          <p>A space for offerings, prayer and honoring the ancestors.</p>
-          <a href="#altar" class="card-btn">EXPLORE</a>
-        </div>
-      </article>
-
-      <article class="explore-card">
-        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&q=80')"></div>
-        <div class="card-content">
-          <h3>THE LIBRARY</h3>
-          <p>Teachings, Stories, Rituals and Ancestral Wisdom.</p>
-          <a href="#library" class="card-btn">EXPLORE</a>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <!-- Guidance / Journal / Story -->
-  <section class="features-section">
-    <div class="feature-card large">
-      <div class="feature-image" style="background-image: url('https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=900&q=80')"></div>
-      <div class="feature-content">
-        <h3>SEEK GUIDANCE</h3>
-        <p>Readings, Ancestral Connections and Spiritual Consultations.</p>
-        <a href="#guidance" class="feature-btn">ENTER THE CONSULTATION ROOM</a>
-      </div>
-    </div>
-
-    <div class="feature-card">
-      <div class="feature-image" style="background-image: url('https://images.unsplash.com/photo-1456513080800-7d93d7b8b0b0?w=700&q=80')"></div>
-      <div class="feature-content">
-        <h3>THE JOURNAL</h3>
-        <p>Writings, Teachings and Reflections from The Ancestors' Room.</p>
-        <a href="#journal" class="feature-btn">ENTER THE JOURNAL</a>
-      </div>
-    </div>
-
-    <div class="feature-card">
-      <div class="feature-image" style="background-image: url('https://images.unsplash.com/photo-1512820790803-83ca734da794?w=700&q=80')"></div>
-      <div class="feature-content">
-        <h3>OUR STORY</h3>
-        <p>Seven Generations of Knowledge, Practice and Ancestral Legacy.</p>
-        <a href="#story" class="feature-btn">READ OUR STORY</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="footer-left">
-      <span class="footer-mark">ÌBÀ AṢẸ EGÚN</span>
-      <span class="star">✦</span>
-    </div>
-    <div class="footer-center">
-      <h4>THE ANCESTORS' ROOM</h4>
-      <p>ROOTED. GROUNDED. GUIDED.</p>
-    </div>
-    <div class="footer-right">
-      <span class="follow-label">FOLLOW THE ROOM</span>
-      <div class="social-links">
-        <a href="#" aria-label="Instagram">IG</a>
-        <a href="#" aria-label="Facebook">f</a>
-        <a href="#" aria-label="YouTube">▶</a>
-        <a href="#" aria-label="TikTok">♪</a>
-      </div>
-    </div>
-  </footer>
+  </div>
 
   <script src="script.js"></script>
 </body>
